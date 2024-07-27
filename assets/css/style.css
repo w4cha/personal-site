@@ -1,0 +1,547 @@
+:root {
+    /*some global variables for styles used during this project*/
+    --grad-1-bg-color: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(182, 179, 214));
+    --grad-2-bg-color: linear-gradient(30deg, rgba(35, 34, 37, 1) 0%, rgba(84, 84, 117, 1) 35%, rgba(25, 25, 77, 1) 55%, rgba(33, 33, 73, 1) 74%, rgba(2, 2, 33, 1) 100%);
+    --grad-3-underline-color: linear-gradient(60deg, rgb(78, 56, 98) 0%, rgb(132, 200, 234) 50%, rgb(78, 56, 98) 100%);
+    --grad-4-footer-bg: linear-gradient(45deg, rgb(100, 100, 100) 0%, rgb(150, 150, 150) 50%, rgb(100, 100, 100) 100%);
+    --js-after-display: none;
+}
+
+body {
+    /*using hosted images to reduce project size*/
+    background-image: url("https://i.imgur.com/ayvrYNe.jpeg");
+    background-repeat: repeat;
+    border-style: solid;
+    border-image: var(--grad-1-bg-color);
+    border-image-slice: 30;
+    border-image-width: 1em;
+    position: relative;
+}
+
+#message_alert {
+    display: none;
+    background-color: rgba(0, 255, 0, 0.811);
+    color: #e8ede8;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    position: fixed;
+    /*is placed on the middle instead of the top as originally planed
+    because there was alreaddy a boostrap nav-bar with a z-index and
+    I want to avoid z-index wars*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    background-color: antiquewhite;
+    display: var(--js-after-display);
+    border-radius: 0% 0% 100% 100%;
+    width: 100%;
+    height: 7px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+main {
+    margin-bottom: 20vh;
+    margin-top: 10vh;
+}
+
+.rounded-container {
+    width: 20%;
+    margin: auto;
+    aspect-ratio: 1/1;
+    background-color: black;
+    border-radius: 100%;
+    align-items: center;
+}
+
+.rounded-container > img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-style: solid;
+    border-color: beige;
+    border-width: 0.25em;
+    border-radius: 100%;
+}
+
+.main-title {
+    background-color: black;
+    display: inline-block;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.remarking {
+    cursor: pointer;
+    background-image: var(--grad-3-underline-color);
+    background-size: 100% 4px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
+
+.remarking:not(.title-content) {
+    font-style: italic;
+    font-weight: 700;
+    position: relative;
+}
+
+
+#about_me {
+    margin-top: 10vh;
+}
+
+/*adjusting scroll animation to different devices*/
+@media (785px <= height <= 845px) {
+    #about_me {
+        animation-range: entry 0% cover 40%;
+    }
+}
+
+@media ( 845px < height <= 1200px) {
+    #about_me {
+        animation-range: entry 0% cover 45%;
+    }
+}
+
+@media (1200px < height <= 1360px) {
+    #about_me {
+        animation-range: entry 0% cover 50%;
+    }
+}
+
+@media (height > 1360px) {
+    #about_me {
+        animation-range: entry 0% cover 57%;
+    }
+}
+
+/*remember to center an inline-block element you have to set align-text on the father*/
+.header-decorator {
+    position: relative;
+    width: fit-content;
+}
+
+/*unnecesary decoration that was implemented just because*/
+.header-decorator::after {
+    content: "";
+    width: 100%;
+    height: 5px;
+    border-radius: 20%;
+    background-color: gray;
+    transform: skewX(100deg);
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-behavior: allow-discrete;
+}
+
+.header-decorator:hover::after {
+    background-color: black;
+}
+
+#project-description, main > * {
+    color: cornsilk;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+main > * {
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+main > *:not(.title-entry, .rounded-container) {
+    padding: 5vw 4vw 4vw 4vw;
+    background-image: var(--grad-1-bg-color);
+    animation: appear ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+    position: relative;
+    isolation: isolate;
+
+}
+
+section:not(.title-entry)::after {
+    content: "";
+    background-image: var(--grad-2-bg-color);
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    transform: skewY(5deg);
+}
+
+/*scroll animation a pain in the a***/
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateX(2vw);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(3vw);
+    }
+
+    100% {
+        opacity: 0.9;
+        transform: translateX(2vw);
+    }
+
+}
+
+/*today I learned how tu put images instead of bulletpoints on a li element*/
+#python-li {
+    list-style-image: url("../img/python.png");
+}
+
+#html-li {
+    list-style-image: url("../img/html.png");
+}
+
+#css-li {
+    list-style-image: url("../img/css.png");
+}
+
+#js-li {
+    list-style-image: url("../img/js.png");
+}
+
+#sql-li {
+    list-style-image: url("../img/sql.png");
+}
+
+#git-li {
+    list-style-image: url("../img/git.png");
+}
+
+/*this is a svg component*/
+image {
+    background-color: black;
+    opacity: 1;
+    cursor: pointer;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-behavior: allow-dicrete;
+}
+
+image:hover {
+    opacity: 0.1;
+}
+
+#carousel-gallery {
+    margin: auto;
+    width: 90%;
+    height: 150px;
+    background-image: var(--grad-2-bg-color);
+    position: fixed;
+}
+
+/*making a carousel with different images sizes more responsive
+while allowing such images to resize freely*/
+@media (430px <= width < 600px){
+    #carousel-gallery {
+        height: 200px;
+    }
+
+}
+
+@media (600px <= width < 840px){
+    #carousel-gallery {
+        height: 250px;
+    }
+    
+}
+
+@media (840px <= width < 1000px){
+    #carousel-gallery {
+        height: 350px;
+    }
+
+}
+
+@media (1000px <= width < 1200px){
+    #carousel-gallery {
+        height: 400px;
+    }
+
+}
+
+@media (width >= 1200px){
+    #carousel-gallery {
+        height: 500px;
+    }
+
+}
+
+/*the dialog element and some nice starting style transitions 
+that sadly are too new to be recognized as valid syntax by this
+vscode extension*/
+dialog {
+    display: none;
+    border-radius: 3%;
+    opacity: 0;
+    translate: 0 20vh;
+    transition-property: overlay display opacity;
+    transition-duration: 1.5s;
+    transition-behavior: allow-discrete;
+}
+
+dialog[open] {
+    display: block;
+    opacity: 1;
+    translate: 0 0;
+
+    /*this syntax is correct but it might not be recognized as such by VS CODE*/
+    @starting-style {
+        opacity: 0;
+        translate: 0 -20vh;
+    }
+}
+
+/*speudoelement to style anything outside a dialog*/
+dialog::backdrop {
+    background-color: black;
+    opacity: 0.7;
+}
+
+#gallery-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/*the next 7 selectors are applied to
+svg elements using some svg properties*/
+#details:hover > rect {
+    fill: #016510;
+    stroke: #11ff11;
+}
+
+#details:hover > text {
+    fill: #11ff11;
+}
+
+.pol-nav, #close-gal, #details {
+    cursor: pointer;
+}
+
+.pol-nav:hover {
+    fill: gray;
+}
+
+#close-gal:hover > circle {
+    fill: #680202;
+    stroke: #ff1111;
+}
+
+#close-gal:hover > text {
+    fill: #ff1111;
+}
+
+#project-description {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: auto;
+    border-radius: 7px;
+    background-color: #555555d6;
+}
+
+@media (width >= 820px) {
+    #project-description {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#recicla-g, #finance-g, #chile-g, #sudoku-g {
+    display: none;
+}
+
+.github-link {
+    list-style-image: url("../img/github-logo.png");
+}
+
+.youtube-link {
+    list-style-image: url("../img/youtube-logo.png");
+}
+
+.available-a {
+    color: #11ff11;
+    text-decoration: none;
+}
+
+.available-a:visited {
+    color: #11ff11;
+}
+
+.not-available {
+    font-weight: bolder;
+    color: #ff1111;
+}
+
+li:has(.not-available) {
+    list-style: "\0274C";
+}
+
+#open_form {
+    padding: 5px;
+}
+
+/*case 1 you have a button and you can't add a
+hover effect to it because you are on a touch screen*/
+#send_cv {
+    padding: 15px 5px 14px 5px;
+    text-decoration: none;
+}
+
+.button-contact {
+    border-style: solid;
+    border-radius: 10%;
+    border-width: 5px;
+    height: 5em;
+    width: 110px;
+    border-image: var(--grad-1-bg-color);
+    border-image-slice: 30;
+    background-color: rgb(52, 43, 99);
+    color: rgb(213, 205, 244);
+    border-image-width: 0.25em;
+    margin: 5vw;
+}
+
+/*case 2 one of my buttons is an <a> element because
+you don't have buttons to download things and I need to keep 
+my <a> button responsive so you got me doing this and also
+this only applies if you are on an no hover zone*/
+@media (width >= 700px) and (hover: none) {
+    .button-contact {
+        width: 150px;
+        margin-top: 2em;
+    }
+    #send_cv {
+        padding: 22px 5px 18px 5px;
+    }
+}
+
+/*case 3 I really liked that hover animation so I keep it
+anyways so I had to put that transition back when you are on a
+ screen with a mouse*/
+@media (hover: hover) {
+    .remarking {
+        background-size: 0% 4px;
+        transition-property: background-size;
+        transition-duration: 2s;
+        transition-behavior: allow-discrete;
+    }
+
+    .remarking:hover {
+        background-size: 100% 4px;
+    }
+
+    .button-contact {
+        border-image-slice: none;
+        border-image: none;
+        border-radius: 2%;
+        border-style: solid;
+        border-color: rgb(213, 205, 244);
+        background-color: rgb(25, 20, 50);
+        color: rgb(213, 205, 244);
+        transition-property: border-radius border-color background-color color;
+        transition-duration: 1s;
+        transition-behavior: allow-discrete;
+        font-size: x-small;
+        margin-left: 3em;
+        margin-right: 3em;
+        width: 80px;
+        height: 80px;
+        margin-top: 2em;
+    }
+    
+    .button-contact:hover {
+        border-radius: 50%;
+        border-color: rgb(25, 20, 50);
+        background-color: rgb(213, 205, 244);
+        color: rgb(25, 20, 50);
+    }
+}
+
+/*case 4 so I have my animation back but I still have a crappy
+<a> element disguise as a button so I need to write this last
+piece of code to make it responsive*/
+@media (width < 700px) and (hover: hover) {
+    #send_cv {
+        padding-top: 25px;
+        padding-bottom: 23px;
+    } 
+}
+
+@media (width >= 700px) and (hover: hover) {
+    .button-contact {
+        width: 140px;
+        height: 140px;
+        font-size: 1em;
+        margin-left: 5em;
+        margin-right: 5em;
+    } 
+    #send_cv {
+        padding-top: 48px;
+        padding-bottom: 21px;
+    } 
+}
+
+#modal-form {
+    max-width: 500px;
+    overflow-x: hidden;
+    background-image: url("https://i.imgur.com/ayvrYNe.jpeg");
+}
+
+#phone-select, #email-select {
+    display: none;
+}
+
+footer {
+    width: 20%;
+    font-size: 0.5em;
+}
+
+/*a little easter egg and a disclaimer*/
+.foot-note {
+    cursor: pointer;
+    background-image: var(--grad-4-footer-bg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/*if I don't do this it would be imposible
+to catch the easter egg if your devide can't hover over elements*/
+@media (hover: hover) {
+    .foot-note {
+        background-size: 0% 100%;
+        transition-property: background-size;
+        transition-duration: 2s;
+        transition-behavior: allow-discrete;
+    }
+    .foot-note:hover {
+        background-size: 100% 100%;
+    }
+}

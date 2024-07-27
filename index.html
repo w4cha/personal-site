@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicom icon links-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <!--Boostrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Custom css-->
+    <link href="assets\css\style.css" rel="stylesheet">
+    <!--Jquery library-->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <title>Lucas Folch</title>
+</head>
+<body class="container-fluid p-0 m-0" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <header data-target="#navbar-scroll" data-offset="0" data-spy="scroll" id="start">
+        <!--the id is descriptive enough the contents of this div are brought to you by Jquery-->
+        <div id="message_alert"></div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav text-center w-100 justify-content-around">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#start">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about_me">Sobre mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#socials">Redes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="p-3 d-flex flex-row flex-wrap" data-target="#navbar-scroll" data-offset="0" data-spy="scroll">
+        <div class="rounded-container">
+            <img src="assets\img\perfil.jpg" alt="imagen de perfil" title="Lucas Matías Folch Cañete">
+        </div>
+        <section class="title-entry w-100 text-center">
+            <h1 class="main-title">
+                <span class="remarking title-content">Bienvenidos a mi primer portafolio profesional</span>
+            </h1>
+        </section>
+        <section id="about_me">
+            <h2 class="header-decorator">
+                Sobre mi
+            </h2>
+            <div class="row">
+                <div class="col-10 col-sm-10 col-md-10 col-lg-7">
+                    <p>
+                        Hola, mi nombre es Lucas Matías Folch Cañete y actualmente estoy cursando estudios para
+                        convertirme
+                        en desarrollador fullstack. Nací el año 1994 y vivo en la
+                        comuna de Quilpué,
+                        Región de Valparaíso, Chile. Me considero una persona que cree en la necesidad del
+                        autoaprendizaje continuo y
+                        que busca inspiracón en las cosas que ocurren a su alrededor.
+                    </p>
+                    <p>
+                        Dentro de los principales tecnologias que domino, se encuentran:
+                    </p>
+                    <div id="experience">
+                        <ul>
+                            <li id="python-li">
+                                pyhton
+                                <div class="progress bg-secondary">
+                                    <div class="progress-bar progress-bar bg-dark" role="progressbar" aria-valuenow="75"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 75%">Intermedio/Avanzado
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="html-li">
+                                html
+                                <div class="progress bg-secondary">
+                                    <div class="progress-bar progress-bar bg-dark" role="progressbar" aria-valuenow="40"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 40%">Principiante/Intermedio
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="css-li">
+                                css
+                                <div class="progress bg-secondary">
+                                    <div class="progress-bar progress-bar bg-dark" role="progressbar" aria-valuenow="75"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 45%">Principiante/Intermedio
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="js-li">
+                                js
+                                <div class="progress bg-secondary">
+                                    <div class="progress-bar progress-bar bg-dark" role="progressbar" aria-valuenow="75"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 45%">Principiante/Intermedio
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="sql-li">
+                                sql
+                                <div class="progress bg-secondary">
+                                    <div class="progress-bar progress-bar bg-dark" role="progressbar" aria-valuenow="75"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 35%">Principiante/Intermedio
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="git-li">
+                                git
+                                <div class="progress bg-secondary">
+                                    <div class="progress-bar progress-bar bg-dark" role="progressbar" aria-valuenow="75"
+                                        aria-valuemin="0" aria-valuemax="100" style="width: 25%">Principiante</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <aside class="col-10 col-sm-10 col-md-10 col-lg-4 my-auto">
+                    <figure class="d-flex flex-column align-items-center">
+                        <img src="assets/img/portrait.jpg" class="img-fluid col-10">
+                        <figcaption class="text-center">Lucas Folch, Patagonia, 2024</figcaption>
+                    </figure>
+                </aside>
+            </div>
+        </section>
+        <section id="gallery">
+            <h2 class="header-decorator">
+                Galería de proyectos
+            </h2>
+            <p>
+                Los siguientes son algunos de los proyectos que he realizado con anterioridad como programador.
+                <span class="remarking">
+                    Para obtener más información sobre algún projecto, haz click sobre él.
+                </span>
+            </p>
+            <div class="container-fluid">
+                <!--things might get weird if you are not into svg and how compatible it actually
+                is with html and css, so many design possibilities-->
+                <svg viewBox="0 0 500 300" preserveAspectRatio="xMidYMin slice">
+                    <defs>
+                        <clipPath id="sudoku">
+                            <polygon points="25, 300 350, 300 350, 200 200, 200" fill="black"/>
+                        </clipPath>
+                    </defs>
+                    <text x="150" y="250" font-family="Verdana" font-size="0" id="solver" fill="#ffffff" stroke="black"
+                        transform="skewY(2)">SudokuSolver</text>
+                    <defs>
+                        <clipPath id="chile_welcome">
+                            <polygon points="360, 300 500, 300 500, 0 360, 0"/>
+                        </clipPath>
+                    </defs>
+                    <text x="350" y="90" font-family="Verdana" font-size="0" id="chile" fill="#0000ff" stroke="black"
+                        transform="skewX(12)">
+                        <tspan x="350" dy="1em">Bienvenidos</tspan>
+                        <tspan x="400" dy="1em">a</tspan>
+                        <tspan x="380" dy="1em">Chile</tspan>
+                    </text>
+                    <defs>
+                        <clipPath id="recicling">
+                            <polygon points="10, 300 200, 190 135, 90 200, 0 0, 0"/>
+                        </clipPath>
+                    </defs>
+                    <text x="10" y="130" font-family="Verdana" font-size="0" id="recicla" fill="#00a900" stroke="black"
+                        transform="skewY(-7)">Recicla Chile</text>
+                    <defs>
+                        <clipPath id="cs50">
+                            <circle cy="95" cx="260" r="95"/>
+                        </clipPath>
+                    </defs>
+                    <text x="200" y="100" font-family="Verdana" font-size="0" id="finance" fill="#dd0011" stroke="black"
+                        transform="skewX(-9)">Cs50 finance</text>
+                    <image width="500" heigth="300" clip-path="url(#recicling)"
+                        xlink:href="https://i.imgur.com/OYbkWBF.png" id="site_recicla"/>
+                    <image width="500" heigth="300" clip-path="url(#sudoku)"
+                        xlink:href="https://i.imgur.com/qSNdcJg.png" id="site_solver"/>
+                    <image width="500" heigth="300" clip-path="url(#chile_welcome)"
+                        xlink:href="https://i.imgur.com/ExdkeQi.png" id="site_chile"/>
+                    <image width="500" heigth="300" clip-path="url(#cs50)"
+                        xlink:href="C:\Users\Lucas Folch\Desktop\finance_recorte.png" id="site_finance"/>
+                </svg>
+            </div>
+            <dialog id="carousel-gallery">
+                <div id="gallery-contents">
+                    <img class="img-fluid" src="" id="current">
+                    <!--more svg-->
+                    <svg viewBox="0 0 230 80" preserveAspectRatio="xMidYMin slice" id="gallery-nav">
+                        <g id="details">
+                            <rect x="194" y="3" width="20" height="8" fill="transparent" rx="5" ry="5"
+                                stroke="#88ff99"/>
+                            <text x="204" y="7" font-size="5" text-anchor="middle" alignment-baseline="central"
+                                fill="#88ff99">Detalles</text>
+                        </g>
+                        <polygon points="1, 50 11, 45 10, 48 12, 50 10, 52 11, 55" stroke="black" stroke-linecap="round"
+                            stroke-width="1" fill="white" class="pol-nav" id="minus">
+                            <title>anterior</title>
+                        </polygon>
+                        <polygon points="229, 50 219, 45 220, 48 218, 50 220, 52 219, 55" stroke="black"
+                            stroke-linecap="round" stroke-width="1" fill="white" class="pol-nav" id="plus">
+                            <title>siguiente</title>
+                        </polygon>
+                        <g id="close-gal">
+                            <circle cx="220" cy="7" r="4" fill="transparent" stroke="#ffaa99" stroke-width="1">
+                                <title>cerrar</title>
+                            </circle>
+                            <text x="220" y="6" font-size="7" text-anchor="middle" alignment-baseline="central"
+                                fill="#ffaa99">x</text>
+                        </g>
+                    </svg>
+                    <!--you guess it more Jquery shenanigans-->
+                    <div id="project-description">
+                    </div>
+                    <!--the content in fact that goes on the div above starts here-->
+                    <div id="recicla-g">
+                        <div class="p-2 d-flex flex-col flex-wrap align-items-center">
+                            <h3 class="col-12">
+                                Recicla Chile
+                            </h3>
+                            <p class="col-12">
+                                Pagina web enfocada en lo que es otorgar información tanto geografica como de tipo
+                                de residuos aceptados por los distintos centros de reciclaje a lo largo del país
+                            </p>
+                            <ul class="col-12">
+                                <li class="youtube-link">
+                                    <a href="https://youtu.be/w9_JZ_4LFvI" target="_blank" rel="noopener noreferrer" class="available-a" title="video youtube projecto">Video</a>
+                                </li>
+                                <li class="github-link">
+                                    <a href="https://github.com/w4cha/project" target="_blank" rel="noopener noreferrer" class="available-a" title="repositorio github projecto">Repositorio</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="finance-g">
+                        <div class="p-2 d-flex flex-col flex-wrap align-items-center">
+                            <h3 class="col-12">
+                                Cs50 finance
+                            </h3>
+                            <p class="col-12">
+                                Projecto realizado para un curso online de programación web, consistia 
+                                principalmente en implementar un sitio de compra y venta de acciones donde
+                                las consultas de precios de las mismas se realizaba a traves de una api
+                            </p>
+                            <ul class="col-12">
+                                <li>
+                                    <span class="not-available">Video no disponible</span>
+                                </li>
+                                <li class="github-link">
+                                    <a href="https://github.com/w4cha/finance" target="_blank" rel="noopener noreferrer" class="available-a" title="repositorio github projecto">Repositorio</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="chile-g">
+                        <div class="p-2 d-flex flex-col flex-wrap align-items-center">
+                            <h3 class="col-12">
+                                Bienvenidos a Chile (Welcome to Chile)
+                            </h3>
+                            <p class="col-12">
+                                Primera pagina que escribí, una pequeña demostración de lo que tiene que ofrecer mi país
+                                de origen, fue realizado para un curso en ingles con base en los Estados Unidos
+                            </p>
+                            <ul class="col-12">
+                                <li>
+                                    <span class="not-available">Video no disponible</span>
+                                </li>
+                                <li class="github-link">
+                                    <a href="https://github.com/w4cha/welcome-to-chile" target="_blank" rel="noopener noreferrer" class="available-a" title="repositorio github projecto">Repositorio</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="sudoku-g">
+                        <div class="p-2 d-flex flex-col flex-wrap align-items-center">
+                            <h3 class="col-12">
+                                SudokuSolver
+                            </h3>
+                            <p class="col-12">
+                                Un programa escrito en python para jugar y resolver sudokus de distintos tamaños (4x4, 9x9 y 16x16)
+                            </p>
+                            <ul class="col-12">
+                                <li class="youtube-link">
+                                    <a href="https://youtu.be/aHhhnP1MXuc" target="_blank" rel="noopener noreferrer" class="available-a" title="video youtube projecto">Video</a>
+                                </li>
+                                <li class="github-link">
+                                    <a href="https://github.com/w4cha/python-sudoku" target="_blank" rel="noopener noreferrer" class="available-a" title="repositorio github projecto">Repositorio</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--and ends on the above div-->
+                </div>
+            </dialog>
+        </section>
+        <section id="contact">
+            <h2 class="header-decorator">Contacto</h2>
+            <p>
+                ¿Te gustaría conocer más de mí o comunicarte conmigo? Entonces <span class="remarking">¡qué
+                    esperas!</span>
+                Con los siguientes botones, podrás descargar mi currículum o dejarme un mensaje con tus datos para
+                que pueda
+                comunicarme contigo.
+            </p>
+            <div class="d-flex flex-row justify-content-center">
+                <button id="open_form" class="button-contact" onclick="change_modal('open', 'modal-form');">Déjame un
+                    mensaje</button>
+                <!--pdf download may not work as intended since the user browser by default might want to try to open 
+                the pd before given you the option to download it-->
+                <a id="send_cv" class="button-contact text-center" href="resources/Lucas_Folch_CV .pdf"
+                    download="LucasFolchCV.pdf">Descargar CV</a>
+            </div>
+            <dialog id="modal-form" class="px-0 py-2">
+                <form class="row g-3 d-flex justify-content-center" method="dialog" action="" id="contact-form">
+                    <div class="col-8">
+                        <label for="name" class="form-label text-white">Nombre</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="col-5">
+                        <label for="identifying" class="form-label text-white">Contacto</label>
+                        <select id="identifying" class="form-select" name="contact-info">
+                            <option selected value="no-id">No gracias</option>
+                            <option value="phone">Telefono</option>
+                            <option value="email">Correo</option>
+                            <option value="both">Telefono y correo</option>
+                        </select>
+                    </div>
+                    <div class="col-8" id="phone-select">
+                        <label for="phone" class="form-label text-white">Telefono</label>
+                        <input type="text" class="form-control" id="phone" name="phone" pattern="^(:?\+56|56)?\s?[1-9]{1,2}\s?[0-9]{4}\s?[0-9]{4}$" placeholder="xx xxxx xxxx" title="solo números nacionales con o sin +56 o espacios maximo 14 digitos sin contar +">
+                    </div>
+                    <div class="col-8" id="email-select">
+                        <label for="email" class="form-label text-white">Correo</label>
+                        <input type="email" class="form-control" id="email" name="email" pattern="^[^@]{1,30}@[^@]{1,15}\.[a-zA-Z]{2,3}$" placeholder="nombre@ejemplo.cl">
+                    </div>
+                    <div class="col-8">
+                        <label for="message" class="form-label text-white">Mensaje</label>
+                        <textarea type="text" class="form-control" rows="5" id="message" name="message" spellcheck="true" required></textarea>
+                    </div>
+                    <div class="col-9 d-flex flex-row justify-content-center flex-wrap">
+                        <input type="reset" class="btn btn-secondary m-1 col-6" value="Limpiar campos">
+                        <input type="submit" class="btn btn-secondary m-1 col-4" value="Enviar" id="send">
+                        <!--IF YOU DON'T SPECIFY TYPE BUTTON IT ACTS AS A SUBMIT BUTTON BY DEFAULT
+                        AND THAT CAUSED PROBLEMS WITH THE JS CODE-->
+                        <button type="button" class="btn btn-secondary m-1 col-4" onclick="change_modal('close', 'modal-form')" id="form-close">Cerrar</button>
+                    </div>
+                </form>
+            </dialog>
+        </section>
+        <section id="socials">
+            <h2 class="header-decorator">Mis redes sociales</h2>
+            <p>
+                Me puedes encontrar en:
+            </p>
+            <div class="d-flex flex-row justify-content-center flex-wrap gap-5">
+                <a href="https://github.com/w4cha" target="_blank" rel="noopener noreferrer" title="Github">
+                    <img src="assets/img/Github_logo_mini.png" class="img-fluid" ref="github logo">
+                </a>
+                <a href="https://www.linkedin.com/in/lucas-matias-folch-ca%C3%B1ete-64790b232/" target="_blank" rel="noopener noreferrer" class="d-flex flex-row align-items-center" title="LinkedIn">
+                    <img src="assets/img/LinkedIn_logo_mini.png" ref="linkedin logo">
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="text-center my-3 mx-auto">
+        <small class="foot-note">Sitio creado por lucas folch 2024 &#xa9; todos los derechos reservados</small>
+    </footer>
+    <!--Custom js-->
+    <script src="assets/js/script.js"></script>
+    <!--Boostrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>
