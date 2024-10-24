@@ -161,7 +161,6 @@ $(document).ready(function() {
         setTimeout(() => {
             $("#message_alert").fadeOut(1500);
         }, 5000);
-        $("#contact-form")[0].reset();
         $("#identifying").trigger("change");
         change_modal("close", "modal-form");
     })
