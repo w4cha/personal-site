@@ -10,6 +10,16 @@ const images = ["https://i.imgur.com/bzlYpKT.png", "https://i.imgur.com/aMmg0qA.
 const panels = ["site_recicla", "site_finance", "site_chile", "site_solver"];
 const related_content = ["recicla-g", "finance-g", "chile-g", "sudoku-g"];
 var current = "#current";
+var form_name = "";
+
+function show_message() {
+    let message_div = document.getElementById("message_alert");
+    message_div.innerText = `Tu mensaje ha sido enviado exitosamente ${form_name} gracias por tus comentarios`;
+    message_div.style.display = "block";
+    setTimeout(() => {
+        message_div.style.display = "none";
+    }, 1000);
+}
 
 // showModal is not supported by jquery, showModal is
 // a function that can be called on dialog html elements,
@@ -151,16 +161,12 @@ $(document).ready(function() {
         }
     })
 
-    // creates a success message to be display when a form is submited, then it shows that message
+    // creates a success message to be display when a form is submitted, then it shows that message
     // and finally the form values are reset
     // we don't have a server so yeah not implementing an error message
-    // in case the form could't be succesfully submited
+    // in case the form could't be successfully submitted
     $("#contact-form").on("submit", function() {
-        $("#message_alert").html(`Tu mensaje ha sido enviado exitosamente ${$("#name").val()} gracias por tus comentarios`);
-        $("#message_alert").fadeIn(1500);
-        setTimeout(() => {
-            $("#message_alert").fadeOut(1500);
-        }, 5000);
+        form_name = $("#name").val();
         $("#identifying").trigger("change");
         change_modal("close", "modal-form");
     })
