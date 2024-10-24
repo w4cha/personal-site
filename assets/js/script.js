@@ -16,10 +16,11 @@ function show_message() {
     let message_div = document.getElementById("message_alert");
     message_div.innerText = `Tu mensaje ha sido enviado exitosamente ${form_name} gracias por tus comentarios`;
     document.getElementById("contact-form").reset();
+    document.getElementsByTagName("title")[0].innerText = "Gracias";
     message_div.style.display = "block";
     setTimeout(() => {
         message_div.style.display = "none";
-    }, 1000);
+    }, 4000);
 }
 
 // showModal is not supported by jquery, showModal is
