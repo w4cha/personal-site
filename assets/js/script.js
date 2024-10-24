@@ -15,6 +15,7 @@ var form_name = "";
 function show_message() {
     let message_div = document.getElementById("message_alert");
     message_div.innerText = `Tu mensaje ha sido enviado exitosamente ${form_name} gracias por tus comentarios`;
+    document.getElementById("contact-form").reset();
     message_div.style.display = "block";
     setTimeout(() => {
         message_div.style.display = "none";
