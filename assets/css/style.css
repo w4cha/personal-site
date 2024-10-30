@@ -9,7 +9,7 @@
 
 body {
     /*using hosted images to reduce project size*/
-    background-image: url("https://i.imgur.com/ayvrYNe.jpeg");
+    background-image: url("../img/background.jpg");
     background-repeat: repeat;
     border-style: solid;
     border-image: var(--grad-1-bg-color);
@@ -377,7 +377,7 @@ svg elements using some svg properties*/
     }
 }
 
-#recicla-g, #finance-g, #chile-g, #sudoku-g {
+#recicla-g, #finance-g, #chile-g, #sudoku-g, #laboratorio-g, #vehiculo-g {
     display: none;
 }
 

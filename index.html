@@ -54,7 +54,7 @@
         </div>
         <section class="title-entry w-100 text-center">
             <h1 class="main-title">
-                <span class="remarking title-content">Bienvenidos a mi primer portafolio profesional</span>
+                <span class="remarking title-content">Portafolio profesional</span>
             </h1>
         </section>
         <section id="about_me">
@@ -148,47 +148,65 @@
             <div class="container-fluid">
                 <!--things might get weird if you are not into svg and how compatible it actually
                 is with html and css, so many design possibilities-->
-                <svg viewBox="0 0 500 300" preserveAspectRatio="xMidYMin slice">
+                <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMin slice">
                     <defs>
-                        <clipPath id="sudoku">
-                            <polygon points="25, 300 350, 300 350, 200 200, 200" fill="black"/>
+                        <clipPath id="vehiculo">
+                            <path d="M 0 100 A 100 30 0 0 1 500 100 L 500,100 H 10 Z" fill="black"/>
                         </clipPath>
                     </defs>
-                    <text x="150" y="250" font-family="Verdana" font-size="0" id="solver" fill="#ffffff" stroke="black"
+                    <text x="170" y="70" font-family="Verdana" font-size="0" id="vehicle" fill="#aa9900" stroke="black"
+                        transform="skewX(9)">Galería vehículos</text>
+                    <defs>
+                        <clipPath id="sudoku">
+                            <polygon points="25, 400 350, 400 350, 300 200, 300" fill="black"/>
+                        </clipPath>
+                    </defs>
+                    <text x="150" y="350" font-family="Verdana" font-size="0" id="solver" fill="#ffffff" stroke="black"
                         transform="skewY(2)">SudokuSolver</text>
                     <defs>
                         <clipPath id="chile_welcome">
-                            <polygon points="360, 300 500, 300 500, 0 360, 0"/>
+                            <polygon points="360, 400 500, 400 500, 110 356, 105"/>
                         </clipPath>
                     </defs>
-                    <text x="350" y="90" font-family="Verdana" font-size="0" id="chile" fill="#0000ff" stroke="black"
+                    <text x="350" y="190" font-family="Verdana" font-size="0" id="chile" fill="#43A6C6" stroke="black"
                         transform="skewX(12)">
-                        <tspan x="350" dy="1em">Bienvenidos</tspan>
-                        <tspan x="400" dy="1em">a</tspan>
-                        <tspan x="380" dy="1em">Chile</tspan>
+                        <tspan x="330" dy="1em">Bienvenidos</tspan>
+                        <tspan x="370" dy="1em">a</tspan>
+                        <tspan x="350" dy="1em">Chile</tspan>
                     </text>
                     <defs>
                         <clipPath id="recicling">
-                            <polygon points="10, 300 200, 190 135, 90 200, 0 0, 0"/>
+                            <polygon points="10, 400 200, 290 135, 190 200, 110 0, 110"/>
                         </clipPath>
                     </defs>
-                    <text x="10" y="130" font-family="Verdana" font-size="0" id="recicla" fill="#00a900" stroke="black"
+                    <text x="10" y="230" font-family="Verdana" font-size="0" id="recicla" fill="#00a900" stroke="black"
                         transform="skewY(-7)">Recicla Chile</text>
                     <defs>
                         <clipPath id="cs50">
-                            <circle cy="95" cx="260" r="95"/>
+                            <circle cy="195" cx="260" r="90"/>
                         </clipPath>
                     </defs>
-                    <text x="200" y="100" font-family="Verdana" font-size="0" id="finance" fill="#dd0011" stroke="black"
+                    <text x="230" y="200" font-family="Verdana" font-size="0" id="finance" fill="#dd0011" stroke="black"
                         transform="skewX(-9)">Cs50 finance</text>
+                    <defs>
+                        <clipPath id="labs_django">
+                            <polygon points="10, 410 500, 408 450, 490 70, 490"/>
+                        </clipPath>
+                    </defs>
+                    <text x="150" y="400" font-family="Verdana" font-size="0" id="labs" fill="#bb00aa" stroke="black"
+                        transform="skewY(12)">Productos farmacia</text>
+                    <image width="500" height="100" clip-path="url(#vehiculo)"
+                        xlink:href="assets\img\projects_img\vehicle.png" id="site_vehicle"/>
                     <image width="500" height="500" clip-path="url(#recicling)"
-                        xlink:href="https://i.imgur.com/OYbkWBF.png" id="site_recicla"/>
+                        xlink:href="assets\img\projects_img\reciclaje.png" id="site_recicla"/>
                     <image width="500" height="500" clip-path="url(#sudoku)"
-                        xlink:href="https://i.imgur.com/qSNdcJg.png" id="site_solver"/>
-                    <image width="500" height="350" clip-path="url(#chile_welcome)"
-                        xlink:href="https://i.imgur.com/ExdkeQi.png" id="site_chile"/>
-                    <image width="500" clip-path="url(#cs50)"
-                    xlink:href="https://i.imgur.com/aMmg0qA.png" id="site_finance"/>
+                        xlink:href="assets\img\projects_img\sudoku.png" id="site_solver"/>
+                    <image width="500" height="450" clip-path="url(#chile_welcome)"
+                        xlink:href="assets\img\projects_img\chile.png" id="site_chile"/>
+                    <image width="700" clip-path="url(#cs50)"
+                    xlink:href="assets\img\projects_img\cs50.png" id="site_finance"/>
+                    <image width="700" height="900" clip-path="url(#labs_django)"
+                        xlink:href="assets\img\projects_img\labs.png" id="site_labs"/>
                 </svg>
             </div>
             <dialog id="carousel-gallery">
@@ -222,6 +240,28 @@
                     <div id="project-description">
                     </div>
                     <!--the content in fact that goes on the div above starts here-->
+                    <div id="vehiculo-g">
+                        <div class="p-2 d-flex flex-col flex-wrap align-items-center">
+                            <h3 class="col-12">
+                                Galería de vehículos
+                            </h3>
+                            <p class="col-12">
+                                Primer sitio escrito usando django, el cual sirvió como ejercicio para explorar las
+                                herramientas con las que cuenta el framework al crear un sitio web que permite
+                                listar vehículos para su venta con la opción de añadir una galería de imágenes para 
+                                complementar el estado del vehículo las cuales son subidas al sitio manualmente por los
+                                usuarios registrados en la pagina
+                            </p>
+                            <ul class="col-12">
+                                <li>
+                                    <span class="not-available">Video no disponible</span>
+                                </li>
+                                <li class="github-link">
+                                    <a href="https://github.com/w4cha/vehicle-site" target="_blank" rel="noopener noreferrer" class="available-a" title="repositorio github projecto">Repositorio</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     <div id="recicla-g">
                         <div class="p-2 d-flex flex-col flex-wrap align-items-center">
                             <h3 class="col-12">
@@ -294,6 +334,27 @@
                                 </li>
                                 <li class="github-link">
                                     <a href="https://github.com/w4cha/python-sudoku" target="_blank" rel="noopener noreferrer" class="available-a" title="repositorio github projecto">Repositorio</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="laboratorio-g">
+                        <div class="p-2 d-flex flex-col flex-wrap align-items-center">
+                            <h3 class="col-12">
+                                Portal de venta de fármacos
+                            </h3>
+                            <p class="col-12">
+                                Sitio creado usando django, postgresql y htmx como herramientas destacadas, en este sitio
+                                exploro mi primera base para lo que es crear un sitio de venta online en este caso enfocado a
+                                medicamentos. El sitio incluye un listado de productos con detalles e imágenes de los mismos, 
+                                un sistema de stock, un carro de compras y una sencilla pagina de perfil para los usuarios registrados 
+                            </p>
+                            <ul class="col-12">
+                                <li>
+                                    <span class="not-available">Video no disponible</span>
+                                </li>
+                                <li class="github-link">
+                                    <a href="https://github.com/w4cha/mdeciations_site" target="_blank" rel="noopener noreferrer" class="available-a" title="repositorio github projecto">Repositorio</a>
                                 </li>
                             </ul>
                         </div>

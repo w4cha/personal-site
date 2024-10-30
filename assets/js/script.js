@@ -6,9 +6,9 @@
 // is going to be uploaded as consecuence there migth be some lag
 // when displaying the site for the first time
 
-const images = ["https://i.imgur.com/bzlYpKT.png", "https://i.imgur.com/aMmg0qA.png", "https://i.imgur.com/To35yk5.png", "https://i.imgur.com/T8JYKVA.png"];
-const panels = ["site_recicla", "site_finance", "site_chile", "site_solver"];
-const related_content = ["recicla-g", "finance-g", "chile-g", "sudoku-g"];
+const images = ["assets\\img\\projects_img\\vehicle-detalle.png", "assets\\img\\projects_img\\reciclaje-detalle.png", "assets\\img\\projects_img\\cs50.png", "assets\\img\\projects_img\\chile-detalle.png", "assets\\img\\projects_img\\sudoku-detalle.png", "assets\\img\\projects_img\\labs-detalle.png"];
+const panels = ["site_vehicle", "site_recicla", "site_finance", "site_chile", "site_solver", "site_labs"];
+const related_content = ["vehiculo-g", "recicla-g", "finance-g", "chile-g", "sudoku-g", "laboratorio-g"];
 var current = "#current";
 var form_name = "";
 
