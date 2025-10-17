@@ -4,7 +4,22 @@
     --grad-2-bg-color: linear-gradient(30deg, rgba(35, 34, 37, 1) 0%, rgba(84, 84, 117, 1) 35%, rgba(25, 25, 77, 1) 55%, rgba(33, 33, 73, 1) 74%, rgba(2, 2, 33, 1) 100%);
     --grad-3-underline-color: linear-gradient(60deg, rgb(78, 56, 98) 0%, rgb(132, 200, 234) 50%, rgb(78, 56, 98) 100%);
     --grad-4-footer-bg: linear-gradient(45deg, rgb(100, 100, 100) 0%, rgb(150, 150, 150) 50%, rgb(100, 100, 100) 100%);
+    --scroll-bar-track: linear-gradient(to bottom , rgb(0, 0 ,0), rgb(150, 150, 150), rgb(0, 0, 0));
+    --scroll-bar-thumb: linear-gradient(to bottom , rgb(11, 1, 43), rgb(39, 0, 103), rgb(11, 1, 43));
     --js-after-display: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scroll-bar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-bar-thumb);
+  border-radius: 10px;
 }
 
 body {
@@ -100,6 +115,9 @@ main {
     position: relative;
 }
 
+.container-fluid {
+    overflow: auto;
+}
 
 #about_me {
     margin-top: 10vh;
@@ -235,6 +253,18 @@ section:not(.title-entry)::after {
     list-style-image: url("../img/git.png");
 }
 
+#docker-li {
+    list-style-image: url("../img/docker.png");
+}
+
+#kafka-li {
+    list-style-image: url("../img/kafka.png");
+}   
+
+#nifi-li {
+    list-style-image: url("../img/nifi.png");
+}
+
 /*this is a svg component*/
 image {
     background-color: black;
@@ -253,8 +283,13 @@ image:hover {
     margin: auto;
     width: 90%;
     height: 150px;
+    padding: 0%;
     background-image: var(--grad-2-bg-color);
     position: fixed;
+}
+
+#carousel-gallery::-webkit-scrollbar-track {
+    border-radius: 10px;
 }
 
 /*making a carousel with different images sizes more responsive
@@ -377,7 +412,7 @@ svg elements using some svg properties*/
     }
 }
 
-#recicla-g, #finance-g, #chile-g, #sudoku-g, #laboratorio-g, #vehiculo-g {
+#recicla-g, #finance-g, #churn-g, #sudoku-g, #laboratorio-g, #vehiculo-g {
     display: none;
 }
 
